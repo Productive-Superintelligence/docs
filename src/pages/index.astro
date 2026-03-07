@@ -1,17 +1,145 @@
 ---
-
+// index.astro - Benevolent Minimalism
 ---
-
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
+    <head>
+        <meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Productive Superintelligence</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Space+Mono&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <header>
+                <div class="symbol">ψ</div>
+            </header>
+
+            <article>
+                <h1>Productive Superintelligence</h1>
+                <hr />
+                <p class="manifesto">
+                    <em>Free and open-source</em> minimalist and effective system-level full-stack agentic frameworks and building suites.
+                </p>
+            </article>
+
+            <section class="action">
+                <p class="label">Repository</p>
+                <a href="https://github.com/productive-superintelligence" class="repo-link">
+                    github.com/productive-superintelligence
+                </a>
+            </section>
+        </main>
+    </body>
 </html>
+
+<style>
+    :root {
+        --bg: #fdfdfc;           /* Warm, expensive paper white */
+        --text: #1a1a1a;         /* Deep charcoal */
+        --gray: #757575;         /* Soft secondary gray */
+        --border: #e0ddd7;       /* Muted parchment border */
+        --font-serif: 'Newsreader', serif;
+        --font-mono: 'Space Mono', monospace;
+    }
+
+    body {
+        background-color: var(--bg);
+        color: var(--text);
+        font-family: var(--font-serif);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+        width: 100%;
+        max-width: 680px;
+        padding: 120px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header {
+        margin-bottom: 4rem;
+    }
+
+    .symbol {
+        font-size: 3.5rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+        font-style: italic;
+        opacity: 0.85;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        font-weight: 400;
+        font-style: italic;
+        letter-spacing: -0.02em;
+        margin: 0;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid var(--border);
+        width: 60px;
+        margin: 2.5rem auto;
+    }
+
+    .manifesto {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        color: var(--text);
+        margin: 0 auto 5rem auto;
+        max-width: 560px;
+        font-weight: 400;
+    }
+
+    .manifesto em {
+        font-style: italic;
+    }
+
+    /* ACTION SECTION */
+    .action {
+        margin-bottom: 4rem;
+    }
+
+    .label {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--gray);
+        margin-bottom: 1.2rem;
+    }
+
+    .repo-link {
+        font-family: var(--font-mono);
+        font-size: 0.85rem;
+        color: var(--text);
+        text-decoration: none;
+        padding-bottom: 4px;
+        border-bottom: 1px solid var(--border);
+        transition: border-color 0.3s ease, opacity 0.3s ease;
+    }
+
+    .repo-link:hover {
+        border-color: var(--text);
+        opacity: 0.7;
+    }
+
+    @media (max-width: 600px) {
+        h1 { font-size: 2.2rem; }
+        .manifesto { font-size: 1.2rem; }
+        main { padding: 80px 24px; }
+    }
+</style>
