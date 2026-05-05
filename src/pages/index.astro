@@ -49,6 +49,19 @@
             </section>
 
         </main>
+
+        <footer>
+            <p class="copyright">
+                Productive Superintelligence &copy; <span id="copyright-year"></span>
+            </p>
+        </footer>
+
+        <script>
+            const start = 2026;
+            const now = new Date().getFullYear();
+            document.getElementById('copyright-year')!.textContent =
+                now > start ? `${start} – ${now}` : `${start}`;
+        </script>
     </body>
 </html>
 
@@ -200,6 +213,22 @@
         letter-spacing: 0.15em;
         color: var(--gray);
         margin-bottom: 1.2rem;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+
+    .copyright {
+        font-family: var(--font-mono);
+        font-size: 0.6rem;
+        color: var(--border);
+        margin: 0;
+        letter-spacing: 0.08em;
     }
 
     @media (max-width: 600px) {
