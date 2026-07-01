@@ -1,302 +1,65 @@
 ---
-// index.astro - Benevolent Minimalism
+import SiteLayout from "../layouts/SiteLayout.astro";
 ---
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Productive Superintelligence</title>
-        
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Space+Mono&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <main>
-            <header>
-                <div class="symbol-container">
-                    <svg viewBox="0 0 100 100" class="psi-layer">
-                        <defs>
-                            <mask id="u-mask">
-                                <path class="reveal-u" d="M 35 20 C 15 90, 80 80, 75 20" stroke="white" stroke-width="30" fill="none" stroke-linecap="butt" pathLength="100"/>
-                            </mask>
-                        </defs>
 
-                        <!-- <path class="reveal-u" d="M 32 30 C 15 90, 80 80, 75 30" stroke="red" stroke-width="23" fill="none" stroke-linecap="round" pathLength="100" opacity="0.5"/> -->
-                        
-                        <image href="/psi-u.svg" x="0" y="0" width="100" height="100" mask="url(#u-mask)" />
-                    </svg>
+<SiteLayout>
+    <header>
+        <a href="/" class="symbol-container" aria-label="Productive Superintelligence home">
+            <svg viewBox="0 0 100 100" class="psi-layer">
+                <defs>
+                    <mask id="u-mask">
+                        <path class="reveal-u" d="M 35 20 C 15 90, 80 80, 75 20" stroke="white" stroke-width="30" fill="none" stroke-linecap="butt" pathLength="100" />
+                    </mask>
+                </defs>
+                <image href="/psi-u.svg" x="0" y="0" width="100" height="100" mask="url(#u-mask)" />
+            </svg>
 
-                    <svg viewBox="0 0 100 100" class="psi-layer">
-                        <defs>
-                            <mask id="i-mask">
-                                <path class="reveal-i" d="M 38 90 L 60 20" stroke="white" stroke-width="25" fill="none" stroke-linecap="butt" pathLength="100"/>
-                            </mask>
-                        </defs>
+            <svg viewBox="0 0 100 100" class="psi-layer">
+                <defs>
+                    <mask id="i-mask">
+                        <path class="reveal-i" d="M 38 90 L 60 20" stroke="white" stroke-width="25" fill="none" stroke-linecap="butt" pathLength="100" />
+                    </mask>
+                </defs>
+                <image href="/psi-i.svg" x="0" y="0" width="100" height="100" mask="url(#i-mask)" />
+            </svg>
+        </a>
+    </header>
 
-                        <!-- <path class="reveal-i" d="M 38 90 L 60 20" stroke="blue" stroke-width="23" fill="none" stroke-linecap="round" pathLength="100" opacity="0.5"/> -->
+    <article>
+        <h1>Productive Superintelligence</h1>
+        <hr />
+        <p class="manifesto">
+            <em>Free and open-source</em> minimalist and effective system-level full-stack agentic frameworks and building suites.
+        </p>
+        <a href="https://github.com/productive-superintelligence" class="repo-link">
+            <svg class="gh-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" /></svg>
+            github.com/productive-superintelligence
+        </a>
+    </article>
 
-                        <image href="/psi-i.svg" x="0" y="0" width="100" height="100" mask="url(#i-mask)" />
-                    </svg>
-                </div>
-            </header>
+    <section class="hub-panel" aria-labelledby="hub-title">
+        <p class="label" id="hub-title">Package Hub</p>
+        <p class="section-copy">
+            Discover, inspect, download, and compose PSI packages through the hosted hub.
+        </p>
+        <a href="/hub" class="text-link">Open ψ Hub</a>
+    </section>
 
-            <article>
-                <h1>Productive Superintelligence</h1>
-                <hr />
-                <p class="manifesto">
-                    <em>Free and open-source</em> minimalist and effective system-level full-stack agentic frameworks and building suites.
-                </p>
-                <a href="https://github.com/productive-superintelligence" class="repo-link">
-                    <svg class="gh-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                    github.com/productive-superintelligence
-                </a>
-            </article>
-
-            <section class="frameworks">
-                <p class="label">Core Frameworks</p>
-                <div class="package-grid">
-                    <a href="https://lllm.one" class="package-block">
-                        <span class="package-desc">Agentic system programming</span>
-                        <img src="/lllm-logo-text-dark.png" alt="lllm" class="package-logo" />
-                    </a>
-                    <a href="https://sssn.one" class="package-block">
-                        <span class="package-desc">Agentic system network</span>
-                        <img src="/sssn-logo-text-dark.png" alt="sssn" class="package-logo" />
-                    </a>
-                    <a href="https://aaax.one" class="package-block">
-                        <span class="package-desc">Agentic system shell</span>
-                        <img src="/aaax-logo-text-dark.png" alt="aaax" class="package-logo" />
-                    </a>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p class="copyright">
-                Productive Superintelligence &copy; <span id="copyright-year"></span>
-            </p>
-        </footer>
-
-        <script>
-            const start = 2026;
-            const now = new Date().getFullYear();
-            document.getElementById('copyright-year').textContent =
-                now > start ? `${start} – ${now}` : `${start}`;
-        </script>
-    </body>
-</html>
-
-<style>
-    :root {
-        --bg: #fdfdfc;
-        --text: #1a1a1a;
-        --gray: #757575;
-        --border: #e0ddd7;
-        --font-serif: 'Newsreader', serif;
-        --font-mono: 'Space Mono', monospace;
-    }
-
-    body {
-        background-color: var(--bg);
-        color: var(--text);
-        font-family: var(--font-serif);
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        min-height: 100vh;
-        -webkit-font-smoothing: antialiased;
-    }
-
-    main {
-        width: 100%;
-        max-width: 680px;
-        padding: 120px 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    header {
-        margin-bottom: 4rem;
-    }
-
-    /* Symbol Container Logic */
-    .symbol-container {
-        position: relative;
-        width: 95px;
-        height: 95px;
-        margin-bottom: 1rem;
-        opacity: 0.85;
-    }
-
-    .psi-layer {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: visible;
-    }
-
-    /* Professional Mask Animation Styling */
-    .reveal-u, .reveal-i {
-        stroke-dasharray: 100;
-        stroke-dashoffset: 101;
-        visibility: hidden;
-    }
-
-    .reveal-u {
-        animation: sequence-u 3.5s ease-in-out infinite;
-    }
-
-    .reveal-i {
-        animation: sequence-i 3.5s ease-in-out infinite;
-    }
-
-    @keyframes sequence-u {
-        0%, 5% { stroke-dashoffset: 101; visibility: hidden; }
-        6% { visibility: visible; }
-        40%, 85% { stroke-dashoffset: 0; visibility: visible; }
-        90%, 100% { stroke-dashoffset: -101; visibility: hidden; }
-    }
-
-    @keyframes sequence-i {
-        0%, 40% { stroke-dashoffset: 101; visibility: hidden; }
-        41% { visibility: visible; }
-        70%, 85% { stroke-dashoffset: 0; visibility: visible; }
-        90%, 100% { stroke-dashoffset: -101; visibility: hidden; }
-    }
-
-    h1 {
-        font-size: 2.8rem;
-        font-weight: 400;
-        font-style: italic;
-        letter-spacing: -0.02em;
-        margin: 0;
-    }
-
-    hr {
-        border: 0;
-        border-top: 1px solid var(--border);
-        width: 60px;
-        margin: 2.5rem auto;
-    }
-
-    .manifesto {
-        font-size: 1.4rem;
-        line-height: 1.6;
-        color: var(--text);
-        margin: 0 auto 2rem auto;
-        max-width: 560px;
-        font-weight: 400;
-    }
-
-    .manifesto em {
-        font-style: italic;
-    }
-
-    .repo-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5em;
-        font-family: var(--font-mono);
-        font-size: 0.75rem;
-        color: var(--gray);
-        text-decoration: none;
-        margin-bottom: 4rem;
-        transition: color 0.2s ease;
-    }
-
-    .repo-link:hover {
-        color: var(--text);
-    }
-
-    .repo-link .gh-icon {
-        width: 13px;
-        height: 13px;
-    }
-
-    .frameworks {
-        margin-bottom: 4rem;
-        width: 100%;
-    }
-
-    .package-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1px;
-        border: 1px solid var(--border);
-    }
-
-    .package-block {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 1.5rem 1rem 1rem;
-        color: var(--text);
-        text-decoration: none;
-        transition: background-color 0.2s ease;
-        gap: 0.4rem;
-    }
-
-    .package-block + .package-block {
-        border-left: 1px solid var(--border);
-    }
-
-    .package-block:hover {
-        background-color: #f5f4f0;
-    }
-
-    .package-logo {
-        width: 100%;
-        max-width: 140px;
-        height: 40px;
-        object-fit: contain;
-        margin-bottom: 0.75rem;
-        opacity: 0.85;
-    }
-
-    .package-desc {
-        font-family: var(--font-serif);
-        font-size: 0.75rem;
-        color: var(--gray);
-        font-style: italic;
-    }
-
-    .label {
-        font-family: var(--font-mono);
-        font-size: 0.65rem;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
-        color: var(--gray);
-        margin-bottom: 1.2rem;
-    }
-
-    footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
-        padding: 1.5rem 0;
-    }
-
-    .copyright {
-        font-family: var(--font-mono);
-        font-size: 0.6rem;
-        color: var(--border);
-        margin: 0;
-        letter-spacing: 0.08em;
-    }
-
-    @media (max-width: 600px) {
-        h1 { font-size: 2.2rem; }
-        .manifesto { font-size: 1.2rem; }
-        main { padding: 80px 24px; }
-        .package-grid { grid-template-columns: 1fr; }
-        .package-block + .package-block { border-left: none; border-top: 1px solid var(--border); }
-    }
-</style>
+    <section class="frameworks">
+        <p class="label">Projects</p>
+        <div class="package-grid">
+            <a href="https://lllm.one" class="package-block">
+                <span class="package-desc">Agentic system programming</span>
+                <img src="/lllm-logo-text-dark.png" alt="lllm" class="package-logo" />
+            </a>
+            <a href="https://sssn.one" class="package-block">
+                <span class="package-desc">Agentic system network</span>
+                <img src="/sssn-logo-text-dark.png" alt="sssn" class="package-logo" />
+            </a>
+            <a href="https://aaax.one" class="package-block">
+                <span class="package-desc">Agentic system shell</span>
+                <img src="/aaax-logo-text-dark.png" alt="aaax" class="package-logo" />
+            </a>
+        </div>
+    </section>
+</SiteLayout>
