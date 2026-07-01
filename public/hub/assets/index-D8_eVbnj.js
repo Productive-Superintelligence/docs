@@ -214,7 +214,7 @@
         `).join("")}
       </div>
     </section>
-  `}function W(e){const t=K(e),n=`${t}-${e.version||"package"}.zip`,i=X(e),r=`packages/${t}`;return[{label:"Install",command:"python -m pip install psicli psihub lllm-core sssn"},{label:"Download",command:[`mkdir -p "${r}"`,`curl -L "${A(e)}" -o "${n}"`,`unzip -q -o "${n}" -d "${r}"`].join(`
+  `}function W(e){const t=K(e),n=`${t}-${e.version||"package"}.zip`,i=X(e),r=`packages/${t}`;return[{label:"Install",command:"python -m pip install prosi-psi-cli psihub lllm-core sssn"},{label:"Download",command:[`mkdir -p "${r}"`,`curl -L "${A(e)}" -o "${n}"`,`unzip -q -o "${n}" -d "${r}"`].join(`
 `)},{label:"Launch",command:`psi launch "${r}" --port ${i}`},{label:"Call",command:G(e,i)}]}function G(e,t){return J(e)?`curl http://127.0.0.1:${t}/channels`:[`curl -X POST http://127.0.0.1:${t}/run \\`,"  -H 'content-type: application/json' \\",`  -d '{"input": {}}'`].join(`
 `)}function K(e){const t=e.name||String(e.identifier||"package").split("/").pop();return String(t||"package").replace(/[^a-zA-Z0-9._-]+/g,"-")}function V(e){const t=String(e.primary||""),[n,i]=t.split("."),s={tactics:"tactic",services:"service",channels:"channel",snapshots:"snapshot",runs:"run"}[n];return!s||!i||!Array.isArray(e.resources)?null:e.resources.find(o=>o.kind===s&&o.name===i)||null}function J(e){return String(e.primary||"").startsWith("channels.")||e.kind==="channel"}function X(e){const t=V(e),n=Array.isArray(e.resources)?e.resources.find(s=>s.kind==="service"):null,r=((t==null?void 0:t.metadata)||(n==null?void 0:n.metadata)||{}).port;return Number.isInteger(r)&&r>0&&r<65536?r:8e3}function Y(e){const t=Array.isArray(e.resources)?e.resources:[];return a.activeTab==="resources"?`
       <div class="resource-table">
