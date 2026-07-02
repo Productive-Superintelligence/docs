@@ -5,11 +5,8 @@
 name: Deploy Astro site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
+  # Allows manual rebuilds from the Actions tab. The live site is also checked
+  # in under /docs so branch-backed Pages can publish without this deploy job.
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages

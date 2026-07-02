@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">PSI</title>
+  <rect width="96" height="96" rx="16" fill="#ffffff"/>
+  <path d="M49 16c-15.1 0-27 10.7-27 24.5 0 11.2 7.6 20.2 18.6 23v10.9H27.5V82h38v-7.6H52.4V63.5C63.4 60.7 71 51.7 71 40.5 71 26.7 64.1 16 49 16Zm0 7.8c10 0 14 7.3 14 16.7 0 8.8-5.7 16.1-14 16.1s-19-7.3-19-16.1c0-9.4 9-16.7 19-16.7Z" fill="#111111"/>
+</svg>
+
