@@ -23,9 +23,10 @@ const { title = "Productive Superintelligence" } = Astro.props;
                 <span class="home-psi" aria-hidden="true">ψ</span>
             </a>
             <div class="nav-links">
-                <a href="/hub">PsiHub</a>
-                <a href="/blog">Blog</a>
+                <a href="/cli/docs">CLI</a>
+                <a href="/hub">Hub</a>
                 <a href="/projects">Projects</a>
+                <a href="/blog">Blog</a>
                 <a href="/about">About</a>
             </div>
         </nav>
@@ -340,6 +341,30 @@ const { title = "Productive Superintelligence" } = Astro.props;
         justify-content: center;
         flex-wrap: wrap;
         gap: 1rem;
+    }
+
+    code,
+    pre {
+        font-family: var(--font-mono);
+    }
+
+    pre {
+        margin: 0.75rem 0 1rem;
+        padding: 0.85rem 0.95rem;
+        overflow-x: auto;
+        border: 1px solid var(--border);
+        background: #f5f4f0;
+        color: var(--text);
+        font-size: 0.7rem;
+        line-height: 1.55;
+        text-align: left;
+        white-space: pre;
+    }
+
+    p code,
+    .item-copy code {
+        font-size: 0.78em;
+        color: var(--text);
     }
 
     .page-list {
