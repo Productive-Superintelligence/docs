@@ -5,9 +5,6 @@
 name: Deploy Astro site to Pages
 
 on:
-  push:
-    branches: ["main"]
-
   # Allows manual rebuilds from the Actions tab. The live site is also checked
   # in under /docs so branch-backed Pages can publish without this deploy job.
   workflow_dispatch:

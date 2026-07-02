@@ -1,6 +1,8 @@
 name: Refresh Branch Pages
 
 on:
+  push:
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -69,5 +71,16 @@ jobs:
                           },
                       )
 
+          request(
+              "PUT",
+              "/pages",
+              {
+                  "build_type": "legacy",
+                  "source": {
+                      "branch": "main",
+                      "path": "/docs",
+                  },
+              },
+          )
           request("POST", "/pages/builds")
           PY
