@@ -23,8 +23,8 @@
 {% endif %}
 <nav class="{{ class }}" aria-label="{{ lang.t('nav') }}" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-nav__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
-      {% include "partials/logo.html" %}
+    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-nav__button md-logo psi-doc-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      <span class="psi-doc-logo__mark" aria-hidden="true">ψ</span>
     </a>
     {{ config.site_name }}
   </label>

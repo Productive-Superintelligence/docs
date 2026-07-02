@@ -155,6 +155,24 @@ html [data-md-color-scheme="slate"] .md-nav--primary .md-nav__title[for="__drawe
   padding: 0.4rem;
 }
 
+.md-header__button.md-logo.psi-doc-logo,
+.md-nav__button.md-logo.psi-doc-logo {
+  color: var(--psi-ink);
+  height: 2rem;
+  margin: 0.2rem;
+  padding: 0;
+  text-decoration: none;
+  width: 2rem;
+}
+
+.psi-doc-logo__mark {
+  font-family: "Newsreader", Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+}
+
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
   display: block;
