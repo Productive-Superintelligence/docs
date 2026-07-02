@@ -379,8 +379,16 @@ const { title = "Productive Superintelligence", layout = "default" } = Astro.pro
         border: 1px solid var(--border);
         display: grid;
         gap: 1px;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
         margin: 0 0 2rem;
+    }
+
+    .docs-project-switch {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .docs-tabs {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        margin-top: -1rem;
     }
 
     .docs-switch a {
@@ -472,6 +480,29 @@ const { title = "Productive Superintelligence", layout = "default" } = Astro.pro
         font-size: 1.05rem;
     }
 
+    .docs-panel {
+        border: 1px solid var(--border);
+        margin-top: 2rem;
+        padding: 1.4rem;
+    }
+
+    .docs-flow {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1px;
+        border: 1px solid var(--border);
+    }
+
+    .docs-flow div {
+        padding: 1rem;
+    }
+
+    .docs-flow strong {
+        display: block;
+        font-size: 1rem;
+        margin-bottom: 0.35rem;
+    }
+
     .item-copy {
         display: block;
         color: var(--gray);
@@ -517,5 +548,7 @@ const { title = "Productive Superintelligence", layout = "default" } = Astro.pro
         .docs-switch a + a { border-left: none; }
         .docs-switch a:nth-child(n + 3) { border-top: 1px solid var(--border); }
         .docs-switch a:last-child { grid-column: 1 / -1; }
+        .docs-project-switch a:last-child { grid-column: auto; }
+        .docs-flow { grid-template-columns: 1fr; }
     }
 </style>

@@ -1,34 +1,58 @@
 ---
 import DocsSwitcher from "../../components/DocsSwitcher.astro";
+import DocsTabs from "../../components/DocsTabs.astro";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 ---
 
 <SiteLayout title="Docs | Productive Superintelligence" layout="docs">
-    <DocsSwitcher current="docs" />
+    <DocsSwitcher current="psi" />
+    <DocsTabs current="overview" />
 
     <section class="docs-section" aria-labelledby="docs-title">
         <p class="label">Docs</p>
-        <h1 id="docs-title">One family of documentation.</h1>
+        <h1 id="docs-title">Psi documentation.</h1>
         <hr />
         <p class="section-copy">
-            PSI frameworks share the same shape: one protocol abstraction, one
-            implementation layer, and one server-ready surface.
+            Psi is the shared documentation front page for the package hub,
+            local command line, and flagship frameworks.
         </p>
         <p class="section-copy muted">
-            Choose a project from the switcher or the cards below.
+            The stack keeps one package grammar while each framework keeps one
+            center abstraction and one service-ready surface.
         </p>
+
+        <div class="docs-panel">
+            <div class="docs-flow" aria-label="PSI tool structure">
+                <div>
+                    <strong>Psi</strong>
+                    Shared package grammar, docs, local setup, and hub surface.
+                </div>
+                <div>
+                    <strong>LLLM</strong>
+                    Low-Level Language Models centers reusable agentic tactics.
+                </div>
+                <div>
+                    <strong>SSSN</strong>
+                    Simple System of Systems Network centers semantic channels.
+                </div>
+                <div>
+                    <strong>AAAX</strong>
+                    Advanced Autonomous Agent Executor mounts package systems.
+                </div>
+            </div>
+        </div>
 
         <div class="docs-grid">
             <a href="https://lllm.one/" class="docs-card">
-                <span class="item-title">LLLM Tactic Framework</span>
+                <span class="item-title">Low-Level Language Models (LLLM)</span>
                 <span class="item-copy">Tactic protocol, runtimes, native agent loops, Pydantic AI integration, and service packaging.</span>
             </a>
             <a href="https://sssn.one/" class="docs-card">
-                <span class="item-title">SSSN Semantic Channel Network</span>
+                <span class="item-title">Simple System of Systems Network (SSSN)</span>
                 <span class="item-copy">Channel protocol, event envelopes, artifacts, snapshots, local stores, and HTTP backends.</span>
             </a>
             <a href="https://aaax.one/" class="docs-card">
-                <span class="item-title">AAAX Agentic Application Shell</span>
+                <span class="item-title">Advanced Autonomous Agent Executor (AAAX)</span>
                 <span class="item-copy">Strategy packages and shells for CLI users, FastAPI apps, and agentic handoff workflows.</span>
             </a>
             <a href="/docs/hub" class="docs-card">

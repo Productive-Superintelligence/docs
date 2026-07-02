@@ -1,0 +1,43 @@
+---
+import DocsSwitcher from "../../components/DocsSwitcher.astro";
+import DocsTabs from "../../components/DocsTabs.astro";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+---
+
+<SiteLayout title="Psi Reference | Productive Superintelligence" layout="docs">
+    <DocsSwitcher current="psi" />
+    <DocsTabs current="reference" />
+
+    <section class="page-section" aria-labelledby="reference-title">
+        <p class="label">Reference</p>
+        <h1 id="reference-title">Psi surface map.</h1>
+        <hr />
+        <p class="section-copy">
+            The PSI tools share package refs and service-shaped resources, but
+            each project owns a narrow public boundary.
+        </p>
+
+        <div class="page-list">
+            <a href="/docs/cli">
+                <span class="item-title">PsiCLI</span>
+                <span class="item-copy"><code>psi init</code>, <code>psi inspect</code>, and <code>psi launch</code> for local users and scripts.</span>
+            </a>
+            <a href="/docs/hub">
+                <span class="item-title">PsiHub</span>
+                <span class="item-copy">Python APIs for package metadata, validation, local hub storage, cards, config templates, and local hub apps.</span>
+            </a>
+            <a href="https://lllm.one/reference/protocol/">
+                <span class="item-title">Low-Level Language Models (LLLM)</span>
+                <span class="item-copy">Tactic protocol, service adapters, runtimes, remote clients, and PsiHub metadata helpers.</span>
+            </a>
+            <a href="https://sssn.one/reference/python-api/">
+                <span class="item-title">Simple System of Systems Network (SSSN)</span>
+                <span class="item-copy">Channel, event, artifact, snapshot, store, server, client, and resolver APIs.</span>
+            </a>
+            <a href="https://aaax.one/reference/python-api/">
+                <span class="item-title">Advanced Autonomous Agent Executor (AAAX)</span>
+                <span class="item-copy">Strategy, mounted resources, package serving, shell endpoints, and handoff surfaces.</span>
+            </a>
+        </div>
+    </section>
+</SiteLayout>

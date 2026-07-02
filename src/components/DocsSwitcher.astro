@@ -1,20 +1,19 @@
 ---
 interface Props {
-    current?: "hub" | "projects" | "docs" | "blog" | "about" | "lllm" | "sssn" | "aaax" | "psihub" | "psicli";
+    current?: "psi" | "lllm" | "sssn" | "aaax";
 }
 
-const { current = "docs" } = Astro.props;
+const { current = "psi" } = Astro.props;
 
 const docs = [
-    { key: "lllm", label: "LLLM Tactic Framework", href: "https://lllm.one/" },
-    { key: "sssn", label: "SSSN Semantic Channel Network", href: "https://sssn.one/" },
-    { key: "aaax", label: "AAAX Agentic Application Shell", href: "https://aaax.one/" },
-    { key: "psihub", label: "PsiHub", href: "/docs/hub" },
-    { key: "psicli", label: "PsiCLI", href: "/docs/cli" },
+    { key: "psi", label: "Psi", href: "/docs" },
+    { key: "lllm", label: "LLLM · Low-Level Language Models", href: "https://lllm.one/" },
+    { key: "sssn", label: "SSSN · Simple System of Systems Network", href: "https://sssn.one/" },
+    { key: "aaax", label: "AAAX · Advanced Autonomous Agent Executor", href: "https://aaax.one/" },
 ];
 ---
 
-<nav class="docs-switch" aria-label="Documentation switcher">
+<nav class="docs-switch docs-project-switch" aria-label="Documentation switcher">
     {docs.map((doc) => (
         <a
             href={doc.href}

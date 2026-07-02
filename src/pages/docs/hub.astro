@@ -1,5 +1,6 @@
 ---
 import DocsSwitcher from "../../components/DocsSwitcher.astro";
+import DocsTabs from "../../components/DocsTabs.astro";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import { readFileSync } from "node:fs";
 
@@ -10,6 +11,7 @@ const hubDoc = readFileSync(
 ---
 
 <SiteLayout title="PsiHub Docs | Productive Superintelligence" layout="docs">
-    <DocsSwitcher current="psihub" />
+    <DocsSwitcher current="psi" />
+    <DocsTabs current="psihub" />
     <Fragment set:html={hubDoc} />
 </SiteLayout>

@@ -1,0 +1,47 @@
+---
+import DocsSwitcher from "../../components/DocsSwitcher.astro";
+import DocsTabs from "../../components/DocsTabs.astro";
+import SiteLayout from "../../layouts/SiteLayout.astro";
+---
+
+<SiteLayout title="Psi Tutorial | Productive Superintelligence" layout="docs">
+    <DocsSwitcher current="psi" />
+    <DocsTabs current="tutorial" />
+
+    <section class="page-section" aria-labelledby="tutorial-title">
+        <p class="label">Tutorial</p>
+        <h1 id="tutorial-title">Install, inspect, launch.</h1>
+        <hr />
+        <p class="section-copy">
+            PsiCLI prepares local credentials and launches package resources.
+            PsiHub validates, stores, downloads, and renders package metadata.
+        </p>
+
+        <div class="page-list">
+            <div>
+                <span class="item-title">1. Install The Local Tools</span>
+                <span class="item-copy">Install the command line, package hub, and framework packages together for local PSI work.</span>
+                <pre><code>python -m pip install prosi-psi-cli psihub lllm-core sssn aaax</code></pre>
+            </div>
+            <div>
+                <span class="item-title">2. Validate A Package</span>
+                <span class="item-copy">Use PsiHub from Python when package metadata checks belong inside scripts or apps.</span>
+                <pre><code>from psihub import validate_package
+
+report = validate_package("packages/analyst-tactics")
+assert report.ok</code></pre>
+            </div>
+            <div>
+                <span class="item-title">3. Prepare Credentials</span>
+                <span class="item-copy">Use PsiCLI before launching packages that declare provider keys.</span>
+                <pre><code>psi init packages/analyst-tactics
+psi inspect packages/analyst-tactics --json</code></pre>
+            </div>
+            <div>
+                <span class="item-title">4. Launch Locally</span>
+                <span class="item-copy">Launch the package's primary resource as a local FastAPI service.</span>
+                <pre><code>psi launch packages/analyst-tactics --port 8000</code></pre>
+            </div>
+        </div>
+    </section>
+</SiteLayout>
