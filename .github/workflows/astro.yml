@@ -36,16 +36,6 @@ jobs:
         uses: actions/checkout@v7
         with:
           path: ${{ env.BUILD_PATH }}
-      - name: Checkout PSI CLI docs source
-        uses: actions/checkout@v7
-        with:
-          repository: Productive-Superintelligence/psicli
-          path: psicli
-      - name: Checkout PsiHub docs source
-        uses: actions/checkout@v7
-        with:
-          repository: Productive-Superintelligence/psihub
-          path: psihub
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -72,17 +62,26 @@ jobs:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.BUILD_PATH }}/${{ steps.detect-package-manager.outputs.lockfile }}
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v6
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
+      - name: Install MkDocs dependencies
+        run: python -m pip install mkdocs-material
       - name: Build with Astro
         run: |
           ${{ steps.detect-package-manager.outputs.runner }} astro build \
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
+        working-directory: ${{ env.BUILD_PATH }}
+      - name: Build Psi docs with MkDocs
+        run: python -m mkdocs build --strict --site-dir dist/docs
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5

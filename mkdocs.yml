@@ -1,0 +1,81 @@
+site_name: Psi
+site_description: Documentation for the PSI command line, package hub, and framework docs.
+site_url: https://prosi.io/docs/
+repo_name: Productive-Superintelligence/docs
+repo_url: https://github.com/Productive-Superintelligence/docs
+edit_uri: edit/main/psi_docs/
+copyright: '<a class="psi-footer-brand" href="https://prosi.io/docs/"><span class="psi-footer-wordmark" aria-hidden="true"></span><span class="psi-footer-text">Psi</span></a>'
+
+theme:
+  name: material
+  custom_dir: psi_docs/overrides
+  logo: assets/logo.svg
+  favicon: assets/logo.svg
+  font:
+    text: Newsreader
+    code: Space Mono
+  palette:
+    - scheme: default
+      primary: white
+      accent: black
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.instant
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - content.code.copy
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+
+nav:
+  - Overview: index.md
+  - PsiCLI: cli.md
+  - PsiHub: hub.md
+  - Tutorial: tutorial.md
+  - Reference: reference.md
+
+docs_dir: psi_docs
+
+extra:
+  generator: false
+  homepage: https://prosi.io/
+  current_doc: psi
+  docs_switch:
+    - key: psi
+      title: Psi
+      url: https://prosi.io/docs/
+    - key: lllm
+      title: LLLM
+      url: https://lllm.one/
+    - key: sssn
+      title: SSSN
+      url: https://sssn.one/
+    - key: aaax
+      title: AAAX
+      url: https://aaax.one/
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Productive-Superintelligence/docs
+
+extra_css:
+  - stylesheets/custom.20260702.css
+
+extra_javascript:
+  - javascripts/vendor/mermaid.min.js
+  - javascripts/mermaid-init.20260629.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.tabbed:
+      alternate_style: true
