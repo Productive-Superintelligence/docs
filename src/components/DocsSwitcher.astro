@@ -1,0 +1,27 @@
+---
+interface Props {
+    current?: "hub" | "projects" | "docs" | "blog" | "about" | "lllm" | "sssn" | "aaax" | "psihub" | "psicli";
+}
+
+const { current = "docs" } = Astro.props;
+
+const docs = [
+    { key: "lllm", label: "LLLM", href: "https://lllm.one/" },
+    { key: "sssn", label: "SSSN", href: "https://sssn.one/" },
+    { key: "aaax", label: "AAAX", href: "https://aaax.one/" },
+    { key: "psihub", label: "PsiHub", href: "/docs/hub" },
+    { key: "psicli", label: "PSI CLI", href: "/docs/cli" },
+];
+---
+
+<nav class="docs-switch" aria-label="Documentation switcher">
+    {docs.map((doc) => (
+        <a
+            href={doc.href}
+            class:list={[current === doc.key && "is-active"]}
+            aria-current={current === doc.key ? "page" : undefined}
+        >
+            {doc.label}
+        </a>
+    ))}
+</nav>

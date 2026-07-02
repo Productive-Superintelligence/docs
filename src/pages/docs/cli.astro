@@ -1,7 +1,7 @@
 ---
+import DocsSwitcher from "../../components/DocsSwitcher.astro";
 import SiteLayout from "../../layouts/SiteLayout.astro";
 import { readFileSync } from "node:fs";
-import DocsSwitcher from "../../components/DocsSwitcher.astro";
 
 const cliDoc = readFileSync(
     new URL("../../../../psicli/docs/prosi-cli.html", import.meta.url),

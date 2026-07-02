@@ -1,9 +1,10 @@
 ---
 interface Props {
     title?: string;
+    layout?: "default" | "docs";
 }
 
-const { title = "Productive Superintelligence" } = Astro.props;
+const { title = "Productive Superintelligence", layout = "default" } = Astro.props;
 ---
 
 <html lang="en">
@@ -17,21 +18,21 @@ const { title = "Productive Superintelligence" } = Astro.props;
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Space+Mono&display=swap" rel="stylesheet" />
     </head>
-    <body>
+    <body class:list={[layout === "docs" && "docs-body"]}>
         <nav class="site-nav" aria-label="Primary">
             <a href="/" class="home-mark" aria-label="Productive Superintelligence home">
                 <span class="home-psi" aria-hidden="true">ψ</span>
             </a>
             <div class="nav-links">
-                <a href="/cli/docs">CLI</a>
                 <a href="/hub">Hub</a>
                 <a href="/projects">Projects</a>
+                <a href="/docs">Docs</a>
                 <a href="/blog">Blog</a>
                 <a href="/about">About</a>
             </div>
         </nav>
 
-        <main>
+        <main class:list={[layout === "docs" && "docs-main"]}>
             <slot />
         </main>
 
@@ -133,6 +134,12 @@ const { title = "Productive Superintelligence" } = Astro.props;
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .docs-main {
+        align-items: stretch;
+        max-width: 1040px;
+        text-align: left;
     }
 
     header {
@@ -249,14 +256,16 @@ const { title = "Productive Superintelligence" } = Astro.props;
     .frameworks,
     .hub-panel,
     .quiet-section,
-    .page-section {
+    .page-section,
+    .docs-section {
         margin-bottom: 4rem;
         width: 100%;
     }
 
     .hub-panel,
     .quiet-section,
-    .page-section {
+    .page-section,
+    .docs-section {
         border-top: 1px solid var(--border);
         padding-top: 2rem;
     }
@@ -268,7 +277,16 @@ const { title = "Productive Superintelligence" } = Astro.props;
         border: 1px solid var(--border);
     }
 
-    .package-block {
+    .docs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+        gap: 1px;
+        border: 1px solid var(--border);
+        margin-top: 2rem;
+    }
+
+    .package-block,
+    .docs-card {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -284,8 +302,16 @@ const { title = "Productive Superintelligence" } = Astro.props;
     }
 
     .package-block:hover,
-    .package-block:focus-visible {
+    .package-block:focus-visible,
+    .docs-card:hover,
+    .docs-card:focus-visible {
         background-color: #f5f4f0;
+    }
+
+    .docs-card {
+        align-items: flex-start;
+        min-height: 9rem;
+        padding: 1.15rem;
     }
 
     .package-logo {
@@ -321,6 +347,11 @@ const { title = "Productive Superintelligence" } = Astro.props;
         line-height: 1.6;
     }
 
+    .docs-main .section-copy {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .section-copy.muted {
         color: var(--gray);
         font-style: italic;
@@ -341,6 +372,40 @@ const { title = "Productive Superintelligence" } = Astro.props;
         justify-content: center;
         flex-wrap: wrap;
         gap: 1rem;
+    }
+
+    .docs-switch {
+        align-items: center;
+        border: 1px solid var(--border);
+        display: grid;
+        gap: 1px;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        margin: 0 0 2rem;
+    }
+
+    .docs-switch a {
+        align-items: center;
+        background: var(--bg);
+        color: var(--gray);
+        display: flex;
+        font-family: var(--font-mono);
+        font-size: 0.68rem;
+        justify-content: center;
+        min-height: 2.6rem;
+        padding: 0 0.65rem;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .docs-switch a + a {
+        border-left: 1px solid var(--border);
+    }
+
+    .docs-switch a:hover,
+    .docs-switch a:focus-visible,
+    .docs-switch a.is-active {
+        background: #f5f4f0;
+        color: var(--text);
     }
 
     code,
@@ -401,6 +466,10 @@ const { title = "Productive Superintelligence" } = Astro.props;
         margin-bottom: 0.35rem;
     }
 
+    .docs-card .item-title {
+        font-size: 1.05rem;
+    }
+
     .item-copy {
         display: block;
         color: var(--gray);
@@ -442,5 +511,8 @@ const { title = "Productive Superintelligence" } = Astro.props;
         }
         .package-grid { grid-template-columns: 1fr; }
         .package-block + .package-block { border-left: none; border-top: 1px solid var(--border); }
+        .docs-switch { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .docs-switch a + a { border-left: none; }
+        .docs-switch a:nth-child(n + 3) { border-top: 1px solid var(--border); }
     }
 </style>
