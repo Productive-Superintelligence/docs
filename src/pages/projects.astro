@@ -5,24 +5,47 @@ import SiteLayout from "../layouts/SiteLayout.astro";
 <SiteLayout title="Projects | Productive Superintelligence">
     <section class="page-section" aria-labelledby="projects-title">
         <p class="label">Projects</p>
-        <h1 id="projects-title">Small connective frameworks.</h1>
+        <h1 id="projects-title">Flagship frameworks.</h1>
         <hr />
         <p class="section-copy">
-            PSI projects are designed to stay useful alone and compose through stable service and package boundaries.
+            LLLM, SSSN, and AAAX are the flagship PSI framework trio. Each keeps
+            one center abstraction, one implementation layer, and one service
+            surface so systems can stay small alone and compose uniformly as
+            servers.
+        </p>
+        <p class="section-copy muted">
+            One framework, one abstraction, one layer. Shared structure makes
+            Tactics, Channels, and Shells packageable, inspectable, and callable
+            through the same PSI service grammar.
         </p>
 
         <div class="package-grid">
             <a href="https://lllm.one" class="package-block">
-                <span class="package-desc">Agentic system programming</span>
+                <span class="package-desc">Tactic framework / Runtime layer</span>
                 <img src="/lllm-logo-text-dark.png" alt="lllm" class="package-logo" />
             </a>
             <a href="https://sssn.one" class="package-block">
-                <span class="package-desc">Agentic system network</span>
+                <span class="package-desc">Channel framework / Backend layer</span>
                 <img src="/sssn-logo-text-dark.png" alt="sssn" class="package-logo" />
             </a>
             <a href="https://aaax.one" class="package-block">
-                <span class="package-desc">Agentic system shell</span>
+                <span class="package-desc">Strategy framework / Shell layer</span>
                 <img src="/aaax-logo-text-dark.png" alt="aaax" class="package-logo" />
+            </a>
+        </div>
+
+        <div class="page-list">
+            <a href="https://lllm.one">
+                <span class="item-title">LLLM: Tactic + Runtime</span>
+                <span class="item-copy">A Tactic is the reusable unit of agentic work. Runtime adapters make Python, Pydantic AI, native LLLM, and future runtimes share one callable service surface.</span>
+            </a>
+            <a href="https://sssn.one">
+                <span class="item-title">SSSN: Channel + Backend</span>
+                <span class="item-copy">A Channel is the semantic data contract. Backend implementations provide local stores, HTTP services, remote clients, and future data systems behind the same abstraction.</span>
+            </a>
+            <a href="https://aaax.one">
+                <span class="item-title">AAAX: Strategy + Shell</span>
+                <span class="item-copy">A Strategy names mounted package resources. Shell surfaces expose that strategy as a CLI for humans, FastAPI for apps, and agentic context for Codex or Claude Code.</span>
             </a>
         </div>
     </section>
