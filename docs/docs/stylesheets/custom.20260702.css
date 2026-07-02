@@ -711,9 +711,3 @@ html [data-md-color-scheme="slate"] .md-nav--primary .md-nav__title[for="__drawe
     padding: 0.3rem 0;
   }
 }
-
-.psi-domain {
-  display: inline-block;
-  margin: 0.25rem 0 1rem;
-  font-weight: 700;
-}

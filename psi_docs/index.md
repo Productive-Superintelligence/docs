@@ -1,7 +1,5 @@
 # Psi Documentation
 
-[prosi.io/docs](https://prosi.io/docs/){ .psi-domain }
-
 Psi is the shared documentation set for the local command line, the package hub, and the flagship framework docs. It gives the user-facing setup story a MkDocs home, while the framework docs stay in their own sites.
 
 <div class="psi-tiles" markdown>
