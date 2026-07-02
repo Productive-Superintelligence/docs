@@ -1,0 +1,13 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import { readFileSync } from "node:fs";
+
+const hubDoc = readFileSync(
+    new URL("../../../../psihub/docs/prosi-client.html", import.meta.url),
+    "utf-8",
+);
+---
+
+<SiteLayout title="PsiHub Docs | Productive Superintelligence">
+    <Fragment set:html={hubDoc} />
+</SiteLayout>

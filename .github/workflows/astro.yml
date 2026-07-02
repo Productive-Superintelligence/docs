@@ -25,8 +25,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  BUILD_PATH: "." # default value when not using subfolders
-  # BUILD_PATH: subfolder
+  BUILD_PATH: "site"
 
 jobs:
   build:
@@ -35,6 +34,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          path: ${{ env.BUILD_PATH }}
+      - name: Checkout PSI CLI docs source
+        uses: actions/checkout@v7
+        with:
+          repository: Productive-Superintelligence/psicli
+          path: psicli
+      - name: Checkout PsiHub docs source
+        uses: actions/checkout@v7
+        with:
+          repository: Productive-Superintelligence/psihub
+          path: psihub
       - name: Detect package manager
         id: detect-package-manager
         run: |
