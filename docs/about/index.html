@@ -8,7 +8,7 @@ Connect -> compose -> expose -> connect. The loop closes on itself
 They are not steps in the loop. They are the ground it stands on:
             describe, validate, discover, and launch.
 </p> <div class="page-list"> <a href="/hub"> <span class="item-title">PsiHub</span> <span class="item-copy">The package hub for metadata, validation, cards, config templates, discovery, and download.</span> </a> <a href="/docs/cli/"> <span class="item-title">PsiCLI</span> <span class="item-copy">The local interface for credentials, inspection, and launching package resources.</span> </a> </div> </section> <section class="quiet-section" aria-labelledby="principles-title"> <p class="label">Design Principles</p> <h2 id="principles-title">Own only the seam.</h2> <div class="page-list"> <div> <span class="item-title">Self-similarity</span> <span class="item-copy">No privileged level. What you expose has the shape of what you connect, so composition never bottoms out and never caps.</span> </div> <div> <span class="item-title">Thinness</span> <span class="item-copy">No owned execution and no privileged coordinator. If the connector held logic, the composite would stop looking like the part.</span> </div> <div> <span class="item-title">One grammar</span> <span class="item-copy">Leaf or composite, every package is described in one grammar and presents one service surface so any level can speak to any other.</span> </div> </div> <p class="section-copy muted one-line">
-In one line: Psi connects autonomous systems, composes them, and
+In one line: Psi connects systems, composes them, and
             exposes the composite in the shape it consumed, so the whole
             becomes a part and the loop recurs.
 </p> </section>  </main> <footer> <p class="copyright">

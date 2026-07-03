@@ -1,6 +1,6 @@
 # Psi Documentation
 
-Psi is a fractal connective grammar. It connects autonomous systems, composes them, and exposes the composite in the same shape it consumed, so the whole becomes a part and the loop recurs.
+Psi is a fractal connective grammar. It connects systems, composes them, and exposes the composite in the same shape it consumed, so the whole becomes a part and the loop recurs.
 
 <div class="psi-tiles" markdown>
 
