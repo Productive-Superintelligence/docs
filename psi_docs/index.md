@@ -16,7 +16,7 @@ Compose with `Tactic`: typed units of work that combine.
 
 <a class="psi-tile" href="https://aaax.one/" markdown>
 <strong>AAAX</strong>
-Expose with `Strategy`: orchestration as a service-ready surface.
+Expose with `Strategy`: orchestration as a Pydantic/FastAPI surface another system can connect to.
 </a>
 
 <a class="psi-tile" href="hub.md" markdown>
@@ -34,6 +34,8 @@ Prepare credentials, inspect packages, and launch resources locally.
 ## Connect, Compose, Expose
 
 The essence is: connect, compose, expose, then again. What gets exposed has the shape of what was connected, so composition can repeat at any level.
+
+SSSN, LLLM, and AAAX are independent frameworks, not a required pipeline. Use any one alone, pair them in whatever way fits the system, or stack all three when you want the recursive loop.
 
 ```mermaid
 flowchart LR
@@ -54,7 +56,7 @@ The connective layer owns only the seam: no owned execution, no privileged coord
 
 - Use [SSSN](https://sssn.one/) when systems need to meet through channels, events, artifacts, snapshots, stores, or HTTP backends.
 - Use [LLLM](https://lllm.one/) when typed tactics need to compose work across runtimes.
-- Use [AAAX](https://aaax.one/) when composed package resources need to be exposed as CLI, FastAPI, or agentic shell surfaces.
+- Use [AAAX](https://aaax.one/) when composed package resources need to be exposed as CLI, FastAPI, agentic context, or a service surface another system can connect to.
 - Use [PsiCLI](cli.md) when a human or local script needs to initialize credentials, inspect a package, or launch a package resource.
 - Use [PsiHub](hub.md) when Python code needs package metadata, validation, local publish/download, cards, config templates, or local hub APIs.
 - Use [Tutorial](tutorial.md) for the shortest package lifecycle.
