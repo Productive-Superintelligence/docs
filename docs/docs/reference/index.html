@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <meta name="description" content="Documentation for the PSI command line, package hub, and framework docs.">
+        <meta name="description" content="Documentation for the PSI connective grammar, package hub, command line, and framework docs.">
 
 
 
@@ -463,6 +463,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
 
         <li class="md-nav__item">
+  <a href="#design-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Design Philosophy
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
   <a href="#psi-surfaces" class="md-nav__link">
     <span class="md-ellipsis">
 
@@ -519,6 +530,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
 
         <li class="md-nav__item">
+  <a href="#design-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Design Philosophy
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
   <a href="#psi-surfaces" class="md-nav__link">
     <span class="md-ellipsis">
 
@@ -561,7 +583,51 @@
 
 
 <h1 id="reference">Reference</h1>
-<p>The PSI tools share package refs and service-shaped resources, but each project owns a narrow public boundary.</p>
+<p>The PSI tools share one package grammar and one service-shaped surface. Each project owns a narrow public boundary so the shape can repeat cleanly.</p>
+<h2 id="design-philosophy">Design Philosophy</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Role</th>
+<th>Center</th>
+<th>Boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://sssn.one/">SSSN</a></td>
+<td>Connect</td>
+<td><code>Channel</code></td>
+<td>How systems reach one another through channels, events, artifacts, snapshots, stores, and HTTP access.</td>
+</tr>
+<tr>
+<td><a href="https://lllm.one/">LLLM</a></td>
+<td>Compose</td>
+<td><code>Tactic</code></td>
+<td>Typed units of work that compose across Python, Pydantic AI, native LLLM, remote, and future runtimes.</td>
+</tr>
+<tr>
+<td><a href="https://aaax.one/">AAAX</a></td>
+<td>Expose</td>
+<td><code>Strategy</code></td>
+<td>Composed orchestration presented as CLI, FastAPI, and agentic shell surfaces.</td>
+</tr>
+<tr>
+<td><a href="../hub/">PsiHub</a></td>
+<td>Platform</td>
+<td>Package metadata</td>
+<td>Describe, validate, discover, download, render cards, and produce config templates.</td>
+</tr>
+<tr>
+<td><a href="../cli/">PsiCLI</a></td>
+<td>Interface</td>
+<td>Local command line</td>
+<td>Prepare credentials, inspect packages, and launch package resources.</td>
+</tr>
+</tbody>
+</table>
+<p>The loop is <code>connect -&gt; compose -&gt; expose -&gt; connect</code>. What is exposed keeps the shape of what was connected, so the whole becomes a part and can be connected again.</p>
 <h2 id="psi-surfaces">Psi Surfaces</h2>
 <table>
 <thead>
@@ -573,14 +639,9 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../cli/">PsiCLI</a></td>
-<td>Local command line</td>
-<td><code>psi init</code>, <code>psi inspect</code>, and <code>psi launch</code> for users and scripts.</td>
-</tr>
-<tr>
-<td><a href="../hub/">PsiHub</a></td>
-<td>Python package hub</td>
-<td>Metadata, validation, local publish/download, cards, config templates, and local hub APIs.</td>
+<td><a href="https://sssn.one/">SSSN</a></td>
+<td>Simple System of Systems Network</td>
+<td>Channel, event, artifact, snapshot, store, server, client, and resolver APIs.</td>
 </tr>
 <tr>
 <td><a href="https://lllm.one/">LLLM</a></td>
@@ -588,14 +649,19 @@
 <td>Tactic protocol, service adapters, runtimes, remote clients, and PsiHub metadata helpers.</td>
 </tr>
 <tr>
-<td><a href="https://sssn.one/">SSSN</a></td>
-<td>Simple System of Systems Network</td>
-<td>Channel, event, artifact, snapshot, store, server, client, and resolver APIs.</td>
-</tr>
-<tr>
 <td><a href="https://aaax.one/">AAAX</a></td>
 <td>Advanced Autonomous Agent Executor</td>
 <td>Strategy composition, mounted resources, package serving, shell endpoints, and handoff surfaces.</td>
+</tr>
+<tr>
+<td><a href="../hub/">PsiHub</a></td>
+<td>Python package hub</td>
+<td>Metadata, validation, local publish/download, cards, config templates, and local hub APIs.</td>
+</tr>
+<tr>
+<td><a href="../cli/">PsiCLI</a></td>
+<td>Local command line</td>
+<td><code>psi init</code>, <code>psi inspect</code>, and <code>psi launch</code> for users and scripts.</td>
 </tr>
 </tbody>
 </table>

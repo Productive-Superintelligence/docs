@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
 
-        <meta name="description" content="Documentation for the PSI command line, package hub, and framework docs.">
+        <meta name="description" content="Documentation for the PSI connective grammar, package hub, command line, and framework docs.">
 
 
 
@@ -463,6 +463,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
 
         <li class="md-nav__item">
+  <a href="#connect-compose-expose" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Connect, Compose, Expose
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
   <a href="#one-shape" class="md-nav__link">
     <span class="md-ellipsis">
 
@@ -519,6 +530,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
 
         <li class="md-nav__item">
+  <a href="#connect-compose-expose" class="md-nav__link">
+    <span class="md-ellipsis">
+
+        Connect, Compose, Expose
+
+    </span>
+  </a>
+
+</li>
+
+        <li class="md-nav__item">
   <a href="#one-shape" class="md-nav__link">
     <span class="md-ellipsis">
 
@@ -561,42 +583,45 @@
 
 
 <h1 id="psi-documentation">Psi Documentation</h1>
-<p>Psi is the shared documentation set for the local command line, the package hub, and the flagship framework docs. It gives the user-facing setup story a MkDocs home, while the framework docs stay in their own sites.</p>
+<p>Psi is a fractal connective grammar. It connects autonomous systems, composes them, and exposes the composite in the same shape it consumed, so the whole becomes a part and the loop recurs.</p>
 <div class="psi-tiles">
-<p><a class="psi-tile" href="cli.md" markdown>
-<strong>PsiCLI</strong>
-Prepare credentials, inspect package requirements, and launch package resources locally.
-</a></p>
-<p><a class="psi-tile" href="hub.md" markdown>
-<strong>PsiHub</strong>
-Validate, store, download, and render package metadata from Python.
+<p><a class="psi-tile" href="https://sssn.one/" markdown>
+<strong>SSSN</strong>
+Connect with <code>Channel</code>: how systems reach one another.
 </a></p>
 <p><a class="psi-tile" href="https://lllm.one/" markdown>
 <strong>LLLM</strong>
-Low-Level Language Models centers the <code>Tactic</code> abstraction and runtime layer.
-</a></p>
-<p><a class="psi-tile" href="https://sssn.one/" markdown>
-<strong>SSSN</strong>
-Simple System of Systems Network centers the <code>Channel</code> abstraction and backend layer.
+Compose with <code>Tactic</code>: typed units of work that combine.
 </a></p>
 <p><a class="psi-tile" href="https://aaax.one/" markdown>
 <strong>AAAX</strong>
-Advanced Autonomous Agent Executor centers <code>Strategy</code> composition and shell surfaces.
+Expose with <code>Strategy</code>: orchestration as a service-ready surface.
+</a></p>
+<p><a class="psi-tile" href="hub.md" markdown>
+<strong>PsiHub</strong>
+Describe, validate, discover, and download package metadata.
+</a></p>
+<p><a class="psi-tile" href="cli.md" markdown>
+<strong>PsiCLI</strong>
+Prepare credentials, inspect packages, and launch resources locally.
 </a></p>
 </div>
-<h2 id="one-shape">One Shape</h2>
-<p>The docs are arranged as four switchable sets: <code>Psi</code>, <code>LLLM</code>, <code>SSSN</code>, and <code>AAAX</code>. Each framework uses the same public shape: one framework, one center abstraction, one implementation layer, and one service-ready surface.</p>
+<h2 id="connect-compose-expose">Connect, Compose, Expose</h2>
+<p>The essence is: connect, compose, expose, then again. What gets exposed has the shape of what was connected, so composition can repeat at any level.</p>
 <div class="mermaid">flowchart LR
-  P["Psi package grammar"] --&gt; C["PsiCLI"]
-  P --&gt; H["PsiHub"]
-  P --&gt; L["LLLM: Tactic + Runtime"]
-  P --&gt; S["SSSN: Channel + Backend"]
-  P --&gt; A["AAAX: Strategy + Shell"]
-  L --&gt; V["Callable services"]
-  S --&gt; V
-  A --&gt; V</div>
+  S["SSSN: Channel"] --&gt; L["LLLM: Tactic"]
+  L --&gt; A["AAAX: Strategy"]
+  A --&gt; S
+  P["PsiHub + PsiCLI"] -. "package grammar" .- S
+  P -. "describe, validate, discover, launch" .- A</div>
+<h2 id="one-shape">One Shape</h2>
+<p>The docs are arranged as four switchable sets: <code>Psi</code>, <code>LLLM</code>, <code>SSSN</code>, and <code>AAAX</code>. The framework docs share the same public shape: one center abstraction, one thin implementation layer, and one service-ready surface.</p>
+<p>The connective layer owns only the seam: no owned execution, no privileged coordinator. Thinness is what keeps the exposed composite self-similar to the connected part.</p>
 <h2 id="where-to-go">Where To Go</h2>
 <ul>
+<li>Use <a href="https://sssn.one/">SSSN</a> when systems need to meet through channels, events, artifacts, snapshots, stores, or HTTP backends.</li>
+<li>Use <a href="https://lllm.one/">LLLM</a> when typed tactics need to compose work across runtimes.</li>
+<li>Use <a href="https://aaax.one/">AAAX</a> when composed package resources need to be exposed as CLI, FastAPI, or agentic shell surfaces.</li>
 <li>Use <a href="cli/">PsiCLI</a> when a human or local script needs to initialize credentials, inspect a package, or launch a package resource.</li>
 <li>Use <a href="hub/">PsiHub</a> when Python code needs package metadata, validation, local publish/download, cards, config templates, or local hub APIs.</li>
 <li>Use <a href="tutorial/">Tutorial</a> for the shortest package lifecycle.</li>

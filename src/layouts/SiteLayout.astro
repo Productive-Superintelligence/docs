@@ -70,7 +70,9 @@ const { title = "Productive Superintelligence", layout = "default" } = Astro.pro
         margin: 0;
         padding: 0;
         display: flex;
-        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
         min-height: 100vh;
         -webkit-font-smoothing: antialiased;
     }
@@ -470,6 +472,53 @@ const { title = "Productive Superintelligence", layout = "default" } = Astro.pro
         background: #f5f4f0;
     }
 
+    .principle-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1px;
+        border: 1px solid var(--border);
+        margin-top: 2rem;
+        text-align: left;
+    }
+
+    .principle-card {
+        display: grid;
+        align-content: start;
+        gap: 0.45rem;
+        min-height: 11rem;
+        padding: 1.15rem;
+        color: var(--text);
+        text-decoration: none;
+        background: transparent;
+    }
+
+    .principle-card + .principle-card {
+        border-left: 1px solid var(--border);
+    }
+
+    .principle-card:hover,
+    .principle-card:focus-visible {
+        background: #f5f4f0;
+    }
+
+    .principle-card strong {
+        font-size: 1.05rem;
+    }
+
+    .principle-card span:last-child {
+        color: var(--gray);
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .item-kicker {
+        display: block;
+        color: var(--gray);
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        text-transform: uppercase;
+    }
+
     .item-title {
         display: block;
         font-size: 1rem;
@@ -510,12 +559,14 @@ const { title = "Productive Superintelligence", layout = "default" } = Astro.pro
         line-height: 1.5;
     }
 
+    .one-line {
+        margin-top: 2rem;
+    }
+
     footer {
-        position: fixed;
-        bottom: 0;
         width: 100%;
         text-align: center;
-        padding: 1.5rem 0;
+        padding: 0 0 1.5rem;
         pointer-events: none;
     }
 
@@ -544,6 +595,8 @@ const { title = "Productive Superintelligence", layout = "default" } = Astro.pro
         }
         .package-grid { grid-template-columns: 1fr; }
         .package-block + .package-block { border-left: none; border-top: 1px solid var(--border); }
+        .principle-grid { grid-template-columns: 1fr; }
+        .principle-card + .principle-card { border-left: none; border-top: 1px solid var(--border); }
         .docs-switch { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .docs-switch a + a { border-left: none; }
         .docs-switch a:nth-child(n + 3) { border-top: 1px solid var(--border); }
