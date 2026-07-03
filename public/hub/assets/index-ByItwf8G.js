@@ -7,7 +7,7 @@
         <nav class="nav-links" aria-label="Primary">
           <a class="is-active" href="${y()}">Hub</a>
           <a href="/projects">Projects</a>
-          <a href="${_}">Docs</a>
+          <a href="${_}" target="_blank" rel="noopener noreferrer">Docs</a>
           <a href="/blog">Blog</a>
           <a href="/about">About</a>
         </nav>

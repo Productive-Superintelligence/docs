@@ -19,12 +19,12 @@ Compose with `Tactic`: typed units of work that combine.
 Expose with `Strategy`: orchestration as a Pydantic/FastAPI surface another system can connect to.
 </a>
 
-<a class="psi-tile" href="hub.md" markdown>
+<a class="psi-tile" href="hub/" markdown>
 <strong>PsiHub</strong>
 Describe, validate, discover, and download package metadata.
 </a>
 
-<a class="psi-tile" href="cli.md" markdown>
+<a class="psi-tile" href="cli/" markdown>
 <strong>PsiCLI</strong>
 Prepare credentials, inspect packages, and launch resources locally.
 </a>
