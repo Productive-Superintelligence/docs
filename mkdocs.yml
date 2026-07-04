@@ -30,9 +30,10 @@ theme:
     - search.highlight
 
 nav:
-  - Overview: index.md
+  - Overview:
+      - index.md
+      - PsiSDK: sdk.md
   - PsiCLI: cli.md
-  - SDK: sdk.md
   - PsiHub: hub.md
   - Tutorial: tutorial.md
   - Reference: reference.md

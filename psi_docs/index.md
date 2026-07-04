@@ -30,8 +30,8 @@ Prepare credentials, inspect packages, and launch resources locally.
 </a>
 
 <a class="psi-tile" href="sdk/" markdown>
-<strong>Psi SDK</strong>
-Install the full PSI station while keeping component docs and APIs separate.
+<strong>PsiSDK</strong>
+Install the full PSI station; detailed component docs stay in their own places.
 </a>
 
 </div>
@@ -51,11 +51,52 @@ flowchart LR
   P -. "describe, validate, discover, launch" .- A
 ```
 
-## Psi SDK
+## PsiSDK
 
 `psi-sdk` is the thin umbrella package for projects that want SSSN, LLLM, AAAX, and PsiHub in one install. It re-exports the real component modules as `psi.sssn`, `psi.lllm`, `psi.aaax`, and `psi.hub`, then adds a few local workflow helpers. Detailed docs for channels, tactics, strategies, and package metadata stay with the component docs.
 
-Use [SDK](sdk.md) for the umbrella import and one-install workflow.
+Use [PsiSDK](sdk.md) for the umbrella import and one-install workflow.
+
+### Developer Quick Start
+
+Install the station when a project wants the whole PSI ecology:
+
+```bash
+python -m pip install psi-sdk
+```
+
+```python
+import psi
+
+channel = psi.sssn.Channel(name="signals")
+tactic_type = psi.lllm.Tactic
+strategy_type = psi.aaax.Strategy
+
+psi.init_package("demo", org="local", kind="mixed")
+report = psi.validate_package("demo")
+```
+
+`psi.hub.publish(...)` is the local package-sharing shortcut. PsiCLI is not bundled into the SDK; it remains the top interface for humans and scripts.
+
+### Separate Adoption
+
+Each component remains independently adoptable:
+
+```bash
+python -m pip install sssn
+python -m pip install lllm-core
+python -m pip install aaax
+python -m pip install psihub
+```
+
+```python
+import sssn
+import lllm
+import aaax
+import psihub
+```
+
+Use the component docs for deep API details: [SSSN](https://sssn.one/), [LLLM](https://lllm.one/), [AAAX](https://aaax.one/), and [PsiHub](hub.md).
 
 ## One Shape
 
@@ -69,7 +110,7 @@ The connective layer owns only the seam: no owned execution, no privileged coord
 - Use [LLLM](https://lllm.one/) when typed tactics need to compose work across runtimes.
 - Use [AAAX](https://aaax.one/) when composed package resources need to be exposed as CLI, FastAPI, agentic context, or a service surface another system can connect to.
 - Use [PsiCLI](cli.md) when a human or local script needs to initialize credentials, inspect a package, or launch a package resource.
-- Use [SDK](sdk.md) when a Python project wants the whole PSI ecology from one install.
+- Use [PsiSDK](sdk.md) when a Python project wants the whole PSI ecology from one install.
 - Use [PsiHub](hub.md) when Python code needs package metadata, validation, local publish/download, cards, config templates, or local hub APIs.
 - Use [Tutorial](tutorial.md) for the shortest package lifecycle.
 - Use [Reference](reference.md) for the surface map across Psi, LLLM, SSSN, and AAAX.
