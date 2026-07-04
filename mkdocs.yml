@@ -31,7 +31,7 @@ theme:
 
 nav:
   - Overview:
-      - index.md
+      - Overview: index.md
       - PsiSDK: sdk.md
   - PsiCLI: cli.md
   - PsiHub: hub.md

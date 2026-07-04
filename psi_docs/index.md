@@ -1,4 +1,8 @@
-# Psi Documentation
+---
+title: Overview
+---
+
+# Overview
 
 Psi is a fractal connective grammar. It connects systems, composes them, and exposes the composite in the same shape it consumed, so the whole becomes a part and the loop recurs.
 
@@ -29,7 +33,7 @@ Describe, validate, discover, and download package metadata.
 Prepare credentials, inspect packages, and launch resources locally.
 </a>
 
-<a class="psi-tile" href="sdk/" markdown>
+<a class="psi-tile" href="#psisdk" markdown>
 <strong>PsiSDK</strong>
 Install the full PSI station; detailed component docs stay in their own places.
 </a>

@@ -1,3 +1,7 @@
+---
+title: Overview
+---
+
 # PsiSDK
 
 `psi-sdk` is the thin umbrella package for the PSI ecosystem. It installs the
