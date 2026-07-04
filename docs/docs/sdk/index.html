@@ -10,11 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://prosi.io/docs/reference/">
+        <link rel="canonical" href="https://prosi.io/docs/sdk/">
       
       
-        <link rel="prev" href="../tutorial/">
+        <link rel="prev" href="..">
       
+      
+        <link rel="next" href="../cli/">
       
       
         
@@ -25,7 +27,7 @@
     
     
       
-        <title>Reference - Psi</title>
+        <title>Overview - Psi</title>
       
     
     
@@ -78,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reference" class="md-skip">
+        <a href="#psisdk" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Reference
+              Overview
             
           </span>
         </div>
@@ -127,7 +129,7 @@
     
   
   
-    <a href=".." class="psi-header-nav__link">
+    <a href=".." class="psi-header-nav__link psi-header-nav__link--active">
       Overview
     </a>
   
@@ -165,7 +167,7 @@
         
   
   
-    <a href="./" class="psi-header-nav__link psi-header-nav__link--active">
+    <a href="../reference/" class="psi-header-nav__link">
       Reference
     </a>
   
@@ -297,15 +299,15 @@
 
 
   
-
-  
-
-  
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
   
 
 
@@ -340,7 +342,7 @@
     
   
   
-    <a href=".." class="psi-drawer-sections__link">
+    <a href=".." class="psi-drawer-sections__link psi-drawer-sections__link--active">
       Overview
     </a>
   
@@ -378,7 +380,7 @@
       
   
   
-    <a href="./" class="psi-drawer-sections__link psi-drawer-sections__link--active">
+    <a href="../reference/" class="psi-drawer-sections__link">
       Reference
     </a>
   
@@ -408,6 +410,35 @@
   <ul class="md-nav__list" data-md-scrollfix>
     
       
+        
+        
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+      
+        
+        
   
   
     
@@ -429,7 +460,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    PsiSDK
   
 
     
@@ -447,7 +478,7 @@
   <span class="md-ellipsis">
     
   
-    Reference
+    PsiSDK
   
 
     
@@ -473,10 +504,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#design-philosophy" class="md-nav__link">
+  <a href="#what-it-installs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Design Philosophy
+        What It Installs
       
     </span>
   </a>
@@ -484,10 +515,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#psi-surfaces" class="md-nav__link">
+  <a href="#same-objects" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Psi Surfaces
+        Same Objects
       
     </span>
   </a>
@@ -495,10 +526,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#naming" class="md-nav__link">
+  <a href="#verb-aliases" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Naming
+        Verb Aliases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-helpers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Helpers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version Check
       
     </span>
   </a>
@@ -512,6 +565,7 @@
     </li>
   
 
+      
     
   </ul>
 </nav>
@@ -540,10 +594,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#design-philosophy" class="md-nav__link">
+  <a href="#what-it-installs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Design Philosophy
+        What It Installs
       
     </span>
   </a>
@@ -551,10 +605,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#psi-surfaces" class="md-nav__link">
+  <a href="#same-objects" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Psi Surfaces
+        Same Objects
       
     </span>
   </a>
@@ -562,10 +616,32 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#naming" class="md-nav__link">
+  <a href="#verb-aliases" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Naming
+        Verb Aliases
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-helpers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Helpers
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Version Check
       
     </span>
   </a>
@@ -592,97 +668,139 @@
   
 
 
-<h1 id="reference">Reference</h1>
-<p>The PSI tools share one package grammar and one service-shaped surface. Each project owns a narrow public boundary so the shape can repeat cleanly. SSSN, LLLM, and AAAX can be used independently, paired in any direction, or stacked into the full connect -&gt; compose -&gt; expose loop.</p>
-<h2 id="design-philosophy">Design Philosophy</h2>
+<h1 id="psisdk">PsiSDK</h1>
+<p><code>psi-sdk</code> is the thin umbrella package for the PSI ecosystem. It installs the
+independently adoptable component packages, exposes the framework modules under
+one Python namespace, and includes PsiCLI's user-facing <code>psi</code> command:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>psi-sdk
+</code></pre></div>
+<p>For OS keyring-backed credential storage in PsiCLI, install:</p>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;psi-sdk[secure]&quot;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">psi</span>
+
+<span class="k">assert</span> <span class="n">psi</span><span class="o">.</span><span class="n">lllm</span> <span class="ow">is</span> <span class="nb">__import__</span><span class="p">(</span><span class="s2">&quot;lllm&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">psi</span><span class="o">.</span><span class="n">sssn</span> <span class="ow">is</span> <span class="nb">__import__</span><span class="p">(</span><span class="s2">&quot;sssn&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">psi</span><span class="o">.</span><span class="n">aaax</span> <span class="ow">is</span> <span class="nb">__import__</span><span class="p">(</span><span class="s2">&quot;aaax&quot;</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">psi</span><span class="o">.</span><span class="n">hub</span> <span class="ow">is</span> <span class="nb">__import__</span><span class="p">(</span><span class="s2">&quot;psihub&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>The SDK does not replace the component packages. It is an all-in-one station for
+projects that want the full PSI workflow in one install. Light adopters can
+still install and import <code>lllm-core</code>, <code>sssn</code>, <code>aaax</code>, <code>psihub</code>, or
+<code>prosi-psi-cli</code> directly. PsiCLI is installed by the SDK, but remains the
+top-level command interface for humans and scripts rather than a framework
+module under <code>psi</code>.</p>
+<p>The canonical source for this page lives in the <code>psisdk</code> repository; this hosted
+copy keeps the central Psi docs navigable at <code>prosi.io/docs/sdk/</code>.</p>
+<h2 id="what-it-installs">What It Installs</h2>
 <table>
 <thead>
 <tr>
-<th>Layer</th>
+<th>SDK alias</th>
+<th>Package</th>
 <th>Role</th>
-<th>Center</th>
-<th>Boundary</th>
+<th>Main docs</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="https://sssn.one/">SSSN</a></td>
-<td>Connect</td>
-<td><code>Channel</code></td>
-<td>How systems reach one another through channels, events, artifacts, snapshots, stores, and HTTP access.</td>
+<td><code>psi.sssn</code></td>
+<td><code>sssn</code></td>
+<td>Connect systems through channels.</td>
+<td><a href="https://sssn.one/">sssn.one</a></td>
 </tr>
 <tr>
-<td><a href="https://lllm.one/">LLLM</a></td>
-<td>Compose</td>
-<td><code>Tactic</code></td>
-<td>Typed units of work that compose across Python, Pydantic AI, native LLLM, remote, and future runtimes.</td>
+<td><code>psi.lllm</code></td>
+<td><code>lllm-core</code></td>
+<td>Compose typed tactics across runtimes.</td>
+<td><a href="https://lllm.one/">lllm.one</a></td>
 </tr>
 <tr>
-<td><a href="https://aaax.one/">AAAX</a></td>
-<td>Expose</td>
-<td><code>Strategy</code></td>
-<td>Mounted resources described with Pydantic models and exposed through CLI, FastAPI, agentic context, or any service surface another system can connect to.</td>
+<td><code>psi.aaax</code></td>
+<td><code>aaax</code></td>
+<td>Expose strategies as shells and services.</td>
+<td><a href="https://aaax.one/">aaax.one</a></td>
 </tr>
 <tr>
+<td><code>psi.hub</code></td>
+<td><code>psihub</code></td>
+<td>Describe, validate, publish, and download PSI package metadata.</td>
 <td><a href="../hub/">PsiHub</a></td>
-<td>Platform</td>
-<td>Package metadata</td>
-<td>Describe, validate, discover, download, render cards, and produce config templates.</td>
 </tr>
 <tr>
+<td><code>psi</code> command</td>
+<td><code>prosi-psi-cli</code></td>
+<td>Initialize credentials, inspect packages, and launch resources locally.</td>
 <td><a href="../cli/">PsiCLI</a></td>
-<td>Interface</td>
-<td>Local command line</td>
-<td>Prepare credentials, inspect packages, and launch package resources.</td>
 </tr>
 </tbody>
 </table>
-<p>The loop is <code>connect -&gt; compose -&gt; expose -&gt; connect</code>. What is exposed keeps the shape of what was connected, so the whole becomes a part and can be connected again.</p>
-<h2 id="psi-surfaces">Psi Surfaces</h2>
-<table>
-<thead>
-<tr>
-<th>Surface</th>
-<th>Owns</th>
-<th>Use For</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://sssn.one/">SSSN</a></td>
-<td>Simple System of Systems Network</td>
-<td>Channel, event, artifact, snapshot, store, server, client, and resolver APIs.</td>
-</tr>
-<tr>
-<td><a href="https://lllm.one/">LLLM</a></td>
-<td>Low-Level Language Models</td>
-<td>Tactic protocol, service adapters, runtimes, remote clients, and PsiHub metadata helpers.</td>
-</tr>
-<tr>
-<td><a href="https://aaax.one/">AAAX</a></td>
-<td>Advanced Autonomous Agent Executor</td>
-<td>Strategy composition, mounted resources, Pydantic envelopes, FastAPI apps, package serving, shell endpoints, and handoff surfaces.</td>
-</tr>
-<tr>
-<td><a href="../hub/">PsiHub</a></td>
-<td>Python package hub</td>
-<td>Metadata, validation, local publish/download, cards, config templates, and local hub APIs.</td>
-</tr>
-<tr>
-<td><a href="../cli/">PsiCLI</a></td>
-<td>Local command line</td>
-<td><code>psi init</code>, <code>psi inspect</code>, and <code>psi launch</code> for users and scripts.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="naming">Naming</h2>
-<p>The docs switch and side drawer use short labels: <code>Psi</code>, <code>LLLM</code>, <code>SSSN</code>, and <code>AAAX</code>. The full names are kept in page content, READMEs, and explanatory text where they can be read without making the navigation too wide.</p>
+<p>Detailed API documentation remains with each component. The SDK page only
+documents the umbrella import, verb aliases, tiny workflow helpers, and the fact
+that PsiCLI is included for developer convenience.</p>
+<h2 id="same-objects">Same Objects</h2>
+<p><code>psi</code> re-exports the real modules by identity:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">psi</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">lllm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sssn</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">aaax</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">psihub</span>
+
+<span class="k">assert</span> <span class="n">psi</span><span class="o">.</span><span class="n">lllm</span> <span class="ow">is</span> <span class="n">lllm</span>
+<span class="k">assert</span> <span class="n">psi</span><span class="o">.</span><span class="n">sssn</span> <span class="ow">is</span> <span class="n">sssn</span>
+<span class="k">assert</span> <span class="n">psi</span><span class="o">.</span><span class="n">aaax</span> <span class="ow">is</span> <span class="n">aaax</span>
+<span class="k">assert</span> <span class="n">psi</span><span class="o">.</span><span class="n">hub</span> <span class="ow">is</span> <span class="n">psihub</span>
+</code></pre></div>
+<p>This means examples written for the component packages still work. You can use
+the all-in-one namespace when it helps readability, and import components
+directly when a project only needs one layer.</p>
+<h2 id="verb-aliases">Verb Aliases</h2>
+<p>The SDK also gives the framework trio their PSI verbs:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">psi</span>
+
+<span class="n">connect</span> <span class="o">=</span> <span class="n">psi</span><span class="o">.</span><span class="n">connect</span>   <span class="c1"># sssn</span>
+<span class="n">compose</span> <span class="o">=</span> <span class="n">psi</span><span class="o">.</span><span class="n">compose</span>   <span class="c1"># lllm</span>
+<span class="n">expose</span> <span class="o">=</span> <span class="n">psi</span><span class="o">.</span><span class="n">expose</span>     <span class="c1"># aaax</span>
+<span class="n">share</span> <span class="o">=</span> <span class="n">psi</span><span class="o">.</span><span class="n">share</span>       <span class="c1"># psihub</span>
+</code></pre></div>
+<p>These aliases are module aliases, not new abstractions.</p>
+<h2 id="workflow-helpers">Workflow Helpers</h2>
+<p>The helpers call through to PsiHub and keep local package workflows short:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">psi</span>
+
+<span class="n">psi</span><span class="o">.</span><span class="n">init_package</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span> <span class="n">org</span><span class="o">=</span><span class="s2">&quot;local&quot;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;mixed&quot;</span><span class="p">)</span>
+<span class="n">report</span> <span class="o">=</span> <span class="n">psi</span><span class="o">.</span><span class="n">validate_package</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">report</span><span class="o">.</span><span class="n">ok</span><span class="p">:</span>
+    <span class="n">record</span> <span class="o">=</span> <span class="n">psi</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span> <span class="n">hub_root</span><span class="o">=</span><span class="s2">&quot;.psihub&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">key</span><span class="p">)</span>
+</code></pre></div>
+<p>The same publish helper is mirrored on <code>psi.hub</code> for the station workflow:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">psi</span>
+
+<span class="n">record</span> <span class="o">=</span> <span class="n">psi</span><span class="o">.</span><span class="n">hub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">,</span> <span class="n">hub_root</span><span class="o">=</span><span class="s2">&quot;.psihub&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>For lower-level control, use PsiHub directly:</p>
+<div class="highlight"><pre><span></span><code><span class="n">hub</span> <span class="o">=</span> <span class="n">psi</span><span class="o">.</span><span class="n">hub</span><span class="o">.</span><span class="n">LocalHub</span><span class="p">(</span><span class="s2">&quot;.psihub&quot;</span><span class="p">)</span>
+<span class="n">record</span> <span class="o">=</span> <span class="n">hub</span><span class="o">.</span><span class="n">publish</span><span class="p">(</span><span class="s2">&quot;demo&quot;</span><span class="p">)</span>
+<span class="n">downloaded</span> <span class="o">=</span> <span class="n">hub</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">identifier</span><span class="p">,</span> <span class="s2">&quot;packages&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="version-check">Version Check</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">psi</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">psi</span><span class="o">.</span><span class="n">versions</span><span class="p">())</span>
+</code></pre></div>
+<p>The returned dictionary reports the installed SDK, LLLM, SSSN, AAAX, and
+PsiHub versions.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
