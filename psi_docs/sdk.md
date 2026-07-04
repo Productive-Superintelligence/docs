@@ -20,6 +20,8 @@ assert psi.hub is __import__("psihub")
 The SDK does not replace the component packages. It is an all-in-one station for
 projects that want the full PSI workflow in one install. Light adopters can
 still install and import `lllm-core`, `sssn`, `aaax`, or `psihub` directly.
+PsiCLI is not bundled into the SDK; it remains the top-level command interface
+for humans and scripts.
 
 The canonical source for this page lives in the `psisdk` repository; this hosted
 copy keeps the central Psi docs navigable at `prosi.io/docs/sdk/`.
