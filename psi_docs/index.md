@@ -57,7 +57,7 @@ flowchart LR
 
 ## PsiSDK
 
-`psi-sdk` is the thin umbrella package for projects that want SSSN, LLLM, AAAX, and PsiHub in one install. It re-exports the real component modules as `psi.sssn`, `psi.lllm`, `psi.aaax`, and `psi.hub`, then adds a few local workflow helpers. Detailed docs for channels, tactics, strategies, and package metadata stay with the component docs.
+`psi-sdk` is the thin umbrella package for projects that want SSSN, LLLM, AAAX, PsiHub, and PsiCLI in one install. It re-exports the real component modules as `psi.sssn`, `psi.lllm`, `psi.aaax`, and `psi.hub`, installs the user-facing `psi` command, then adds a few local workflow helpers. Detailed docs for channels, tactics, strategies, package metadata, and CLI workflows stay with the component docs.
 
 Use [PsiSDK](sdk.md) for the umbrella import and one-install workflow.
 
@@ -80,7 +80,11 @@ psi.init_package("demo", org="local", kind="mixed")
 report = psi.validate_package("demo")
 ```
 
-`psi.hub.publish(...)` is the local package-sharing shortcut. PsiCLI is not bundled into the SDK; it remains the top interface for humans and scripts.
+`psi.hub.publish(...)` is the local package-sharing shortcut. The same install also provides PsiCLI's `psi` command for humans and scripts:
+
+```bash
+psi --help
+```
 
 ### Separate Adoption
 
@@ -91,6 +95,7 @@ python -m pip install sssn
 python -m pip install lllm-core
 python -m pip install aaax
 python -m pip install psihub
+python -m pip install prosi-psi-cli
 ```
 
 ```python

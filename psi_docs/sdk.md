@@ -5,11 +5,17 @@ title: Overview
 # PsiSDK
 
 `psi-sdk` is the thin umbrella package for the PSI ecosystem. It installs the
-four independently adoptable component packages and exposes them under one
-Python namespace:
+independently adoptable component packages, exposes the framework modules under
+one Python namespace, and includes PsiCLI's user-facing `psi` command:
 
 ```bash
 python -m pip install psi-sdk
+```
+
+For OS keyring-backed credential storage in PsiCLI, install:
+
+```bash
+python -m pip install "psi-sdk[secure]"
 ```
 
 ```python
@@ -23,9 +29,10 @@ assert psi.hub is __import__("psihub")
 
 The SDK does not replace the component packages. It is an all-in-one station for
 projects that want the full PSI workflow in one install. Light adopters can
-still install and import `lllm-core`, `sssn`, `aaax`, or `psihub` directly.
-PsiCLI is not bundled into the SDK; it remains the top-level command interface
-for humans and scripts.
+still install and import `lllm-core`, `sssn`, `aaax`, `psihub`, or
+`prosi-psi-cli` directly. PsiCLI is installed by the SDK, but remains the
+top-level command interface for humans and scripts rather than a framework
+module under `psi`.
 
 The canonical source for this page lives in the `psisdk` repository; this hosted
 copy keeps the central Psi docs navigable at `prosi.io/docs/sdk/`.
@@ -38,9 +45,11 @@ copy keeps the central Psi docs navigable at `prosi.io/docs/sdk/`.
 | `psi.lllm` | `lllm-core` | Compose typed tactics across runtimes. | [lllm.one](https://lllm.one/) |
 | `psi.aaax` | `aaax` | Expose strategies as shells and services. | [aaax.one](https://aaax.one/) |
 | `psi.hub` | `psihub` | Describe, validate, publish, and download PSI package metadata. | [PsiHub](hub.md) |
+| `psi` command | `prosi-psi-cli` | Initialize credentials, inspect packages, and launch resources locally. | [PsiCLI](cli.md) |
 
 Detailed API documentation remains with each component. The SDK page only
-documents the umbrella import, verb aliases, and tiny workflow helpers.
+documents the umbrella import, verb aliases, tiny workflow helpers, and the fact
+that PsiCLI is included for developer convenience.
 
 ## Same Objects
 
