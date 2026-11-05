@@ -1,5 +1,0 @@
-site_name: LLLM docs have moved
-site_url: https://prosi.io/docs/
-docs_dir: psi_docs
-theme:
-  name: material
