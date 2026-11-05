@@ -1,56 +1,15 @@
 ---
-import SiteLayout from "../layouts/SiteLayout.astro";
+const target = "https://lllm.one/";
 ---
 
-<SiteLayout title="Projects | Productive Superintelligence">
-    <section class="page-section" aria-labelledby="projects-title">
-        <p class="label">Projects</p>
-        <h1 id="projects-title">Flagship frameworks.</h1>
-        <hr />
-        <p class="section-copy">
-            Simple System of Systems Network (SSSN), Low-Level Language Models
-            (LLLM), and Advanced Autonomous Agent Executor (AAAX) are the
-            flagship PSI framework trio: connect, compose, expose.
-        </p>
-        <p class="section-copy muted">
-            They are not a required pipeline. Each keeps one center abstraction
-            and can be used independently, paired with another layer, or stacked
-            with the others so the composite becomes a part and the cycle turns
-            again.
-        </p>
-
-        <div class="package-grid">
-            <a href="https://sssn.one" class="package-block">
-                <span class="package-desc">Connect / Channel</span>
-                <img src="/sssn-logo-text-dark.png" alt="Simple System of Systems Network (SSSN)" class="package-logo" />
-            </a>
-            <a href="https://lllm.one" class="package-block">
-                <span class="package-desc">Compose / Tactic</span>
-                <img src="/lllm-logo-text-dark.png" alt="Low-Level Language Models (LLLM)" class="package-logo" />
-            </a>
-            <a href="https://aaax.one" class="package-block">
-                <span class="package-desc">Expose / Strategy</span>
-                <img src="/aaax-logo-text-dark.png" alt="Advanced Autonomous Agent Executor (AAAX)" class="package-logo" />
-            </a>
-        </div>
-
-        <div class="page-list">
-            <a href="https://sssn.one">
-                <span class="item-title">Simple System of Systems Network (SSSN): connect</span>
-                <span class="item-copy">A Channel is how systems reach one another. Backend implementations provide local stores, HTTP services, remote clients, and future data systems behind the same thin seam.</span>
-            </a>
-            <a href="https://lllm.one">
-                <span class="item-title">Low-Level Language Models (LLLM): compose</span>
-                <span class="item-copy">A Tactic is the typed unit of work. Runtime adapters make Python, Pydantic AI, native LLLM, and future runtimes share one callable service surface.</span>
-            </a>
-            <a href="https://aaax.one">
-                <span class="item-title">Advanced Autonomous Agent Executor (AAAX): expose</span>
-                <span class="item-copy">A Strategy names mounted package resources through Pydantic models and FastAPI endpoints. Shell surfaces can expose orchestration as a CLI, app API, agentic context, or service surface another system can connect to.</span>
-            </a>
-            <div>
-                <span class="item-title">PsiHub and PsiCLI: platform beneath</span>
-                <span class="item-copy">The hub and local interface are not steps in the loop. They make the shared package grammar actionable: describe, validate, discover, and launch.</span>
-            </div>
-        </div>
-    </section>
-</SiteLayout>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>LLLM</title>
+        <link rel="canonical" href={target} />
+        <meta http-equiv="refresh" content={`0; url=${target}`} />
+    </head>
+    <body>
+        <p>Moved to <a href={target}>{target}</a>.</p>
+    </body>
+</html>

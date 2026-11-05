@@ -1,0 +1,20 @@
+---
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Moved</title>
+        <script is:inline>
+            // Old deep links: /hub/... -> lllm.one/hub/..., anything else -> lllm.one
+            const path = window.location.pathname;
+            const target = path.startsWith("/hub/")
+                ? "https://lllm.one" + path
+                : "https://lllm.one/";
+            window.location.replace(target);
+        </script>
+    </head>
+    <body>
+        <p>This page moved to <a href="https://lllm.one/">lllm.one</a>.</p>
+    </body>
+</html>
